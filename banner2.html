@@ -1,0 +1,41 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="banner.css" />
+    <title>Tan Y Coed</title>
+    <meta name="description" content="Tan Y Coed">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!the following script is needed for image tracking>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.min.js"></script>
+    <!the folllowing script is needed to animate gltf files>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+  </head>
+  <body>
+    <div class="fieldnotes"><img src="https://mica-cabildo.com/fieldnotes/fieldnotes2.png" height="30"></div>
+    <div class="trail"><a href="https://sunny-loving-forest.glitch.me/escolta.html"><img src="https://mica-cabildo.com/fieldnotes/back-yellow.png" height="30"></a></div>
+    <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.com/7bdc0786-c538-4689-b98e-871011718896/swatch2.mind; filterMinCF: 0; filterBeta: 0.1;" 
+             color-space="sRGB" 
+             renderer="colorManagement: true, physicallyCorrectLights" 
+             vr-mode-ui="enabled: false" 
+             device-orientation-permission-ui="enabled: false">
+      <!the mindar-image contains link to the image tracking file>
+      <!-- filterMinCF: 0; filterBeta: 0.1;-->
+      <a-assets>
+        <a-asset-item id="fern" 
+        src="https://cdn.glitch.com/7bdc0786-c538-4689-b98e-871011718896/fern-ring.glb"></a-asset-item>
+      </a-assets>
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+      <a-gltf-model src="#fern"
+                animation-mixer
+                scale="1 1 1"
+                position="0 0 0"
+                rotation="0 0 0"
+                ></a-gltf-model>
+        <!--look-at="a-camera"-->
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

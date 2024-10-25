@@ -1,0 +1,101 @@
+body {
+    background: url('https://mica-cabildo.com/fieldnotes/forest-bg.jpg') no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+/*    background-color: #313900; */
+}
+
+.fieldnotes {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-family: "Jost", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 95%;
+    color: #ffffff;
+    line-height: 95%;
+    z-index: 2;
+}
+
+/* menu */
+
+.container {
+    min-width: 300px;
+    max-width: 980px;
+    margin: auto;
+    position: fixed;
+    top: 50vh; left: 50vw; transform: translate(-50%, -50%);
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    text-align: center;
+    /* grid-template-columns: repeat(3, minmax(200px, 300px)); */
+
+}
+
+.item {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Jost", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 95%;
+    color: #ffffff;
+}
+
+a {
+    font-family: "Inconsolata", monospace;
+    font-size: 0.8rem;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: #ffffff;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+
+a:hover {
+    color: #efd753;
+}
+
+
+.btn {
+    border: 1px solid #ffffff;
+    max-width: 360px;
+    font-size: 0.8rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+    cursor: pointer;
+    font-family: "Inconsolata", monospace;
+    font-size: 0.8rem;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: #ffffff;
+    font-variation-settings:
+    "wdth" 100;
+    text-align: center;
+    
+}
+
+.btn:hover {
+    background-color: #e05f2c;
+}
+
+.btn span {
+    color: #ffffff;
+}
